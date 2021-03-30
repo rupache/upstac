@@ -49,7 +49,6 @@ public class ConsultationController {
     @PreAuthorize("hasAnyRole('DOCTOR')")
     public List<TestRequest> getForConsultations() {
 
-        //throw new ResponseStatusException(HttpStatus.NOT_IMPLEMENTED,"Not implemented");
         return testRequestQueryService.findBy(RequestStatus.LAB_TEST_COMPLETED);
 
     }
